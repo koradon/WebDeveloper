@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+    <title>My site</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+</head>
+
+<body>
+    <div>
+        <h1>Simple form which does nothing realy</h1>
+        <form>
+            <p>Input type text with initial value</p>
+            <input type=text value="initial value" name="firstText"/>
+            <p>Input type text with placeholder option</p>
+            <input type=text placeholder="Type here..."/>
+            
+            <br>
+            <hr>
+            
+            <p>Textarea tag with some content</p>
+            <textarea>My content</textarea>
+            
+            <br>
+            <hr>
+            
+            <p>Select tag:</p>
+            <select>
+                <option>option 1</option>
+                <option>option 2</option>
+                <option>option 3</option>
+            </select>
+            
+            <br>
+            <hr>
+            
+            <p>input type radio</p>
+            <input type="radio"/> Some option to select
+            <input type="radio"/> Some option to select, you can select both
+            
+            <p>but if you set same name for them</p>
+            <input type="radio" name="only_one" value="1"/> You can select one
+            <input type="radio" name="only_one" value="2"/> Or other. Not both.
+            
+            <br>
+            <hr>
+            
+            <p>input type "checkbox"</p>
+            <input type="checkbox"/>One
+            <input type="checkbox"/>Two
+            <input type="checkbox"/>Three
+            
+            <br>
+            <hr>
+            <p>And submit button with a text in value option</p>
+            <input type="submit" value="Some value"/>
+            <hr>
+            <p>When you click submit, you will start GET method which will gather information from form. Named parameters will be appended at the end of the url.</p>
+        </form>
+    </div>
+</body>
+</html>

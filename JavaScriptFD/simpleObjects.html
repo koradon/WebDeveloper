@@ -14,7 +14,7 @@
             function configureChair(){
                 var userValue;
 
-                for(var.property in myChair){
+                for(var property in myChair){
                     if(myChair.hasOwnProperty(property)){
                         userValue = prompt("Enter a value for " + property);
                         myChair[property] = userValue;
@@ -34,7 +34,7 @@
 
             configureChair();
             writeChairReceipt();
-            delete myChair.numberOfLegs
+            delete myChair.numberOfLegs;
             writeChairReceipt();
         </script>
     </body>

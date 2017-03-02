@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chair Configuration</title>
+    </head>
+    <body>
+        <script>
+            var myChair = {
+                "cushionMaterial:" : "",
+                "numberOfLegs": "",
+                "legHeight": ""
+            };
+
+            function configureChair(){
+                var userValue;
+
+                for(var.property in myChair){
+                    if(myChair.hasOwnProperty(property)){
+                        userValue = prompt("Enter a value for " + property);
+                        myChair[property] = userValue;
+                    }
+                }
+            }
+
+            function writeChairReceipt() {
+                document.write("<h2>Your chair will have the following configuration:</h2>");
+
+                for (var property in myChair){
+                    if(myChair.hasOwnProperty(property)){
+                        document.write(property + ": " +myChair[property] + "<br>");
+                    }
+                }
+            }
+
+            configureChair();
+            writeChairReceipt();
+        </script>
+    </body>
+</html>

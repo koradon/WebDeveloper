@@ -14,11 +14,12 @@
                 makeSandwitch: function(meat, cheese, bread, condiment){
                     sandwitch.meat = meat;
                     sandwitch.cheese = cheese;
-                    sandwitch.bread = bread;
-                    sandwitch.condiment = condiment;
+                    this.bread = bread;
+                    this.condiment = condiment;
 
-                    var mySandwitch = sandwitch.bread + ", " +
-                        sandwitch.meat + ", " +
+                    var mySandwitch =
+                        this.bread + ", " +
+                        this.meat + ", " +
                         sandwitch.cheese + ", " +
                         sandwitch.condiment;
 

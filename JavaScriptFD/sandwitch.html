@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Make me a sandwitch</title>
+    </head>
+    <body>
+        <script>
+            var sandwitch = {
+                meat: "",
+                cheese: "",
+                bread: "",
+                condiment: "",
+
+                makeSandwitch: function(meat, cheese, bread, condiment){
+                    sandwitch.meat = meat;
+                    sandwitch.cheese = cheese;
+                    sandwitch.bread = bread;
+                    sandwitch.condiment = condiment;
+
+                    var mySandwitch = sandwitch.bread + ", " +
+                        sandwitch.meat + ", " +
+                        sandwitch.cheese + ", " +
+                        sandwitch.condiment;
+
+                    return mySandwitch;
+                }
+            }
+
+            var sandwitchOrder = sandwitch.makeSandwitch("ham", "cheddar", "wheat", "spicy mustard");
+            document.write(sandwitchOrder);
+        </script>
+    </body>
+</html>

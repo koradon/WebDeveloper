@@ -29,18 +29,60 @@
             color: red;
             font-family: sans-serif;
         }
+        
+        .mainbox {
+            background-color: skyblue;
+            width: 600px;
+        }
+        
+        .title {
+            font-size: 250%;
+            color: #FFFFFF;
+            background-color: black;
+        }
+        
+        .purple-box{
+            background-color: purple;
+            width: 200px;
+            height: 200px;
+            font-size: 200%;
+            float:left;
+        }
+        
+        .green-box{
+            background-color: green;
+            width: 200px;
+            height: 200px;
+            font-size: 200%;
+            float: right
+        }
+        
+        .clear {
+            clear:both;
+        }
     </style>
 </head>
 
 <body>
-    <div>
-        <h1>Internal CSS</h1>
+    <div class="mainbox">
+        <h1 class="title">Internal CSS</h1>
         <p>This is a better way to apply styles to web page. But not the best yet.</p>
         <p class="large">You can even make classes for CSS</p>
         <p class="large cursive">And you can even apply meny classes to one tag.</p>
-        <p>Be aware that if applied classes overwrits the existing styles for tags.</p>
+        <p>Be aware that if applied, classes will overwrites the existing styles for tags.</p>
         <p id="warning">We can also use "id" option. But every id should be used only once within a page. This is only for unique items.</p>
         
+        <div class="purple-box">
+            Some box with text
+        </div>
+        <div class="green-box">
+            Other box with text
+        </div>
+        <div>
+            Another text just to show that it is in center now.
+        </div>
+        <div class="clear"></div>
+        <div>Empty div with style "clear:both" will clear area of floating objects.</div>
         
     </div>
 </body>

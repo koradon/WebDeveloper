@@ -6,36 +6,33 @@
     <meta charset="utf-8" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
+
     <style type="text/css">
         .purple-box{
             background-color: purple;
             width: 200px;
             height: 200px;
             font-size: 200%;
-            position: relative;
-            left: 100px;
-            top: 150px;
-            z-index: 1;
+            padding: 10px;
+            float: left;
         }
-        
+
         .green-box{
             background-color: green;
             width: 200px;
             height: 200px;
             font-size: 200%;
-            position: relative;
-            z-index: 2;
+            float: left;
         }
-        
+
         .red-box {
             background-color: red;
             width: 200px;
             height: 200px;
             font-size: 200%;
-            position: absolute;
+            float: left;
         }
-        
+
         .fixed-logo {
             background-color: aqua;
             width: 120px;
@@ -45,30 +42,39 @@
             right: 100px;
             top: 20px;
         }
-        
+
         .bisque-box {
             background-color: bisque;
-            width: 800px;
+            width: 900px;
             height: 10000px;
             position: absolute;
             z-index: -1;
+        }
+
+        p {
+            padding: 0;
+            margin: 0;
         }
     </style>
 </head>
 
 <body>
     <div class="mainbox">
-            <div class="bisque-box">
+        <div class="bisque-box">
             <div class="fixed-logo">My Site LOGO</div>
-            <div class="red-box">Another box with text</div>
-            <div class="purple-box">Some text</div>
-            <div class="green-box">Some text</div>
 
-            <p>Another paragraph with text.</p>
-            <p>Position relative moves elements relative to the position where they would originaly be.</p>
-            <p>Absolute position will cause that everyting else with ignore that item.</p>
-            <p>Fixed position will allow element to stay in place when page is scrolling. Just like this logo box on the top right corner of this page.</p>
-            <p>Default position value for every element is static.</p>
+            <div class="red-box">
+                <p>Another box with text</p>
+            </div>
+            <div class="purple-box">
+                <p>Some text</p>
+            </div>
+            <div class="green-box">
+                <p>Some text</p>
+            </div>
+
+            <p>Padding will set a position of elements contents within a tags. This will add px to the divs width and height.</p>
+            <p>Just like with margins we can set padding in one line: "padding: 10px 20px 30px 40px", or we can use specified opption to set only those padding we want "padding-left: 20px".</p>
         </div>
     </div>
 </body>

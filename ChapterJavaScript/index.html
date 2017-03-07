@@ -8,13 +8,30 @@
         </style>
     </head>
     <body>
-        <button id="myButton">Click me!</button>
+        <button id="textChanger">Change text of the first div</button>
 
+        <div id="firstDiv">This is some text</div>
+
+        <button id="textAppender">Append some text</button>
+
+        <div id="secondDiv">Javascript is...</div>
+
+        <button id="textCreator">Add text to empty div</button>
+
+        <div id="emptyDiv"></div>
 
         <script>
-            document.getElementById("myButton").onclick = function(){
-                alert("hi");
+            document.getElementById("textChanger").onclick = function(){
+                document.getElementById("firstDiv").innerHTML = "Now text is changed";
             };
+
+            document.getElementById("textAppender").onclick = function(){
+                document.getElementById("secondDiv").innerHTML = document.getElementById("secondDiv").innerHTML + " great";
+            };
+
+            document.getElementById("textCreator").onclick = function(){
+                document.getElementById("emptyDiv").innerHTML = "<ul><li>Cat</li><li>Dog</li></ul>"
+            }
         </script>
     </body>
 </html>

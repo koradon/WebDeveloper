@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Disapearing circle</title>
+
+    </head>
+    <body>
+        <input id="myInput" type="text" value="test"/>
+        <button id="button">change the text</button>
+        <div id="firstDiv">some text in div</div>
+
+        <script>
+            var newText = document.getElementById("myInput").value;
+
+            document.getElementById("button").onclick = function(){
+                newText = document.getElementById("myInput").value;
+                document.getElementById("firstDiv").innerHTML = newText;
+            }
+        </script>
+
+    </body>
+</html>

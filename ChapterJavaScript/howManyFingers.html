@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Disapearing circle</title>
+
+    </head>
+    <body>
+        <p>Gues the number (0-5)</p>
+        <input id="number" />
+        <button id="myButton">Submit</button>
+
+        <div id="resultDiv"></div>
+
+        <script>
+
+
+            document.getElementById("myButton").onclick = function(){
+                var x=Math.random();
+
+                x=6*x;
+                x=Math.floor(x);
+
+                var gues = document.getElementById("number").value;
+
+                if(gues == x){
+                    document.getElementById("resultDiv").innerHTML = "Succes!!! You've got it. " + gues;
+                } else {
+                    document.getElementById("resultDiv").innerHTML = "Try again. My number was " + x;
+                }
+
+            }
+
+
+        </script>
+
+    </body>
+</html>

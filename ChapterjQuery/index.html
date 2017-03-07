@@ -23,22 +23,26 @@
         </style>
     </head>
     <body>
-        <div id="message"></div>
-        <div class="red-box"></div>
-        <div class="red-box"></div>
+        <p>This is some text</p>
+
         <div class="green-circle" id="green-circle"></div>
+
+        <iframe src="http://www.cnn.com"></iframe>
 
         <script>
             $("#green-circle").click(function(){
-               alert("Circle clicked");
-            });
-            $(".red-box").click(function(){
-                alert("Red box clicked");
+                $("p").html("This text has ben changed when i clicked");
+
             });
 
-            $("div").click(function(){
-                alert("Div clicked")
+            $("#green-circle").hover(function(){
+                $("p").html("When i hover the mous on top of green circle, \"p\" gets this text.")
             });
+
+            $("#green-circle").click(function(){
+                $("iframe").attr("src", "http://www.spidersweb.pl");
+            });
+
         </script>
     </body>
 </html>

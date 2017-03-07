@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Disapearing circle</title>
+
+    </head>
+    <body>
+        <p>For loop writing into div below</p>
+
+        <p>Basic for loop</p>
+        <div id="resultDivFor"></div>
+
+        <p>Basic while loop</p>
+        <div id="resultDivWhile"></div>
+
+        <script>
+            var myArray = ["pizza", "chocolate", "coffey", "tea"];
+
+            var forText = ""
+            for(var i=0; i<myArray.length; i++){
+                forText += myArray[i] + " ";
+            }
+
+            document.getElementById("resultDivFor").innerHTML = text;
+
+
+            var j=0;
+            var whileText = "";
+            while(j<myArray.length){
+                whileText += myArray[j] + " ";
+                j++;
+            };
+
+            document.getElementById("resultDivWhile").innerHTML = whileText;
+        </script>
+
+    </body>
+</html>

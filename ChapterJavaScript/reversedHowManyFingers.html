@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Disapearing circle</title>
+
+    </head>
+    <body>
+        <p>how meny fingers are you holding up?</p>
+        <input id="number"/>
+        <button id="guess">Guess!</button>
+        <div id="resultText"></div>
+
+
+        <script>
+            document.getElementById("guess").onclick = function(){
+                var i=0;
+                var gotIt=false;
+                var x;
+                while(gotIt==false){
+                    x=Math.random();
+                    x=x*6;
+                    x=Math.floor(x);
+
+                    i++;
+                    var guess = document.getElementById("number").value;
+
+                    if((guess < 6) && (guess >= 0)){
+                        if(guess == x){
+                            document.getElementById("resultText").innerHTML = "I (the computer) have guessed the number! It was " + x + ". In " + i + " tryes.";
+                            gotIt = true;
+                        } else {
+
+                        }
+                    }
+                }
+            }
+        </script>
+
+    </body>
+</html>

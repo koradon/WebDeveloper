@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Learning jQuery</title>
+
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+        <style type="text/css">
+
+        </style>
+    </head>
+    <body>
+        <p id="text">This is some text</p>
+        <button id="faderOut">Fade Out this text above</button>
+        <button id="faderIn">Fade In this text above</button>
+        <div id="message"></div>
+        <div id="message2"></div>
+        <br>
+
+        <script>
+            $("#faderOut")
+                .click(function(){
+                    $("#message").html("text faded out slowly");
+                    $("#text").fadeOut(2000, function(){
+                        // this is call back function when fadeOut is complete
+                        $("#message2").html("FadeOut completed");
+                    });
+            });
+
+            $("#faderIn")
+                .click(function(){
+                    $("#message").html("text faded In very slowly");
+                    $("#text").fadeIn(4000, function(){
+                        $("#message2").html("FadeIn completed");
+                    });
+            });
+
+
+        </script>
+    </body>
+</html>

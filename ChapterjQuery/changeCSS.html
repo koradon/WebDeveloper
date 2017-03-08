@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Learning jQuery</title>
+
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+        <style type="text/css">
+            .red-box {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                margin-top: 10px;
+            }
+
+            #green-circle {
+                width: 100px;
+                height: 100px;
+                border-radius: 100px;
+                background-color: green;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>This is some text</p>
+        <div id="message"></div>
+        <div id="message2"></div>
+        <br>
+
+        <div class="green-circle" id="green-circle"></div>
+        <div class="red-box"></div>
+        <div class="red-box"></div>
+
+
+
+
+        <script>
+            $("div")
+                .mouseover(function(){
+                    $("#message").html($(this).css("width"));
+                    $(this).css("width", "200px");
+                })
+                .mouseout(function(){
+                    $("#message").html($(this).css("width"));
+                    $(this).css("width", "100px");
+                })
+                .click(function(){
+                    $("#message2").html("hidden");
+                    $(this).fadeOut();
+            });
+
+        </script>
+    </body>
+</html>

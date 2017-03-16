@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Discount</title>
+
+        <link href="style/my_style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="header">
+            <h2>Promocja</h2>
+        </div>
+        <div id="main">
+            <div class="guessBox"><img src="images/jump1.jpg"/></div>
+            <div class="guessBox"><img src="images/jump2.jpg"/></div>
+            <div class="guessBox"><img src="images/jump3.jpg"/></div>
+            <div class="guessBox"><img src="images/jump4.jpg"/></div>
+        </div>
+
+        <script src="scripts/jquery-1.7.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".guessBox").click(function(){
+                    // delete all p tags from divs with .guessBox
+                    $(".guessBox p").remove();
+                    var discount = Math.floor((Math.random()*5)+5);
+                    var discount_msg = "<p>Twój rabat to " + discount + "%</p>";
+                    // take clicked .guessBox and append html text
+                    $(this).append(discount_msg);
+                });
+            });
+
+        </script>
+    </body>
+</html>

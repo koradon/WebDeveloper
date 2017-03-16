@@ -17,18 +17,6 @@
         </div>
 
         <script src="scripts/jquery-1.7.min.js"></script>
-        <script>
-            $(document).ready(function(){
-                $(".guessBox").click(function(){
-                    // delete all p tags from divs with .guessBox
-                    $(".guessBox p").remove();
-                    var discount = Math.floor((Math.random()*5)+5);
-                    var discount_msg = "<p>Twój rabat to " + discount + "%</p>";
-                    // take clicked .guessBox and append html text
-                    $(this).append(discount_msg);
-                });
-            });
-
-        </script>
+        <script src="scripts/my_script.js"></script>
     </body>
 </html>
